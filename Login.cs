@@ -16,5 +16,10 @@ namespace dairy_farm_project
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

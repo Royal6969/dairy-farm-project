@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(446, 912);
             this.panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(61, 504);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(291, 51);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Professionalism";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(61, 386);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(220, 51);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Eco Frindly";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(61, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(247, 51);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Nice Quality";
             // 
             // label1
             // 
@@ -106,19 +142,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(719, 504);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(373, 59);
+            this.textBox1.Size = new System.Drawing.Size(373, 52);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(719, 607);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(373, 59);
+            this.textBox2.Size = new System.Drawing.Size(373, 52);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -158,42 +195,6 @@
             this.label4.Size = new System.Drawing.Size(123, 51);
             this.label4.TabIndex = 10;
             this.label4.Text = "Reset";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(61, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(247, 51);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Nice Quality";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(61, 386);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 51);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Eco Frindly";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(61, 504);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(291, 51);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Professionalism";
             // 
             // Login
             // 

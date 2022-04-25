@@ -16,7 +16,7 @@ namespace dairy_farm_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash()); // me he quedado en el 29:35
+            Application.Run(new Cows());
         }
     }
 }
