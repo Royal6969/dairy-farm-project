@@ -80,3 +80,9 @@ C:\Users\Sergio DC\Desktop\dairy-farm-project\bin\Debug\Bunifu.UI.WinForms.Bunif
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Cows.resources
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy-farm-project.exe.licenses
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy-farm-project.csproj.CopyComplete
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Production.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Breedings.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Dashboard.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Finances.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Health.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Sales.resources
