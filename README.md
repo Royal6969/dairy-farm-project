@@ -150,7 +150,78 @@
 
   ![breeding-table](./img/readme/breed-table.png)
 
-  ## 🖇️ Connect tables with Foreign Key
+  Now we just need to connect the tables among them with foreign keys,
+  but we will get it continuing the project development and throughout code all sections...
+  
+  👨‍💻 Let's start coding the Backend !!
 
-  Now we just need to connect the tables among them with foreign keys
+  Let's start coding Cows section.
+  
+  In each field properties, set a (Name).
+  Then, double click in a button for example, to go to code class.
+  Import (using) System.Data.SqlClient;
+  
+  If in Server Explorer view, you press right click in your connection,
+  and press in properties, you will see in Properties view the "connection statement",
+  and you have to copy that, to paste it in this sentence:
+  
+  SqlConnection Con = new SqlConnection(@"Data Source=SERGIODIAZ\SQLEXPRESS;Initial Catalog=DairyFarm;Integrated Security=True");
+
+  In the properties view of datepicker, look for the property ValueChange and do double click to autogenerate its function.
+  Repeat it with the property MouseLeave.
+  We need to calculate the age from the datepicker date...
+
+  ![ValueChange](./img/readme/DOBDate_ValueChanged.png)
+  ![MouseLeave](./img/readme/DOBDate_MouseLeave.png)
+
+  ```csharp
+        private void DOBDate_ValueChanged(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+            MessageBox.Show("" + age);
+        }
+
+        private void DOBDate_MouseLeave(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+            AgeTb.Text = "" + age;
+        }
+  ```
+
+  Now, we have to do double click in save button to generate the save function and code it:
+
+  ```csharp
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text == "" || EarTagTb.Text == "" || ColorTb.Text == "" || BreedTb.Text == "" || WeightTb.Text == "" || AgeTb.Text == "" || PastureTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+
+                    string Query = "insert into CowTbl (CowName, EarTag, Color, Breed, Age, WeightAtBirth, Pasture) values ('"+ CowNameTb.Text +"', '" + EarTagTb.Text + "', '" + ColorTb.Text + "', '" + BreedTb.Text + "', "+ age +", '" + WeightTb.Text + "', '" + PastureTb.Text +"')"; // It's very important to write the same numbers of fields and values ... // https://es.stackoverflow.com/questions/115201/alguna-forma-de-insertar-registros-cuando-la-tabla-tiene-default-e-identity-en
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow save successfully");
+
+                    Con.Close();
+
+                } catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+  ```
+
+  ![cow-saved-button](./img/readme/cow-saved-button.png)
+
+  It works perfectly !! Let's take a look to the data saved.
+  In server explorer view, if you do right click in a table, you can press the option "view data table"
+
+  ![cow-saved-data](./img/readme/cow-saved-data.png)
 

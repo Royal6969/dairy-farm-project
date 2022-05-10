@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace dairy_farm_project
 {
@@ -92,6 +93,47 @@ namespace dairy_farm_project
             Dashboard Ob = new Dashboard();
             Ob.Show();
             this.Hide();
+        }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=SERGIODIAZ\SQLEXPRESS;Initial Catalog=DairyFarm;Integrated Security=True");
+        int age = 0;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text == "" || EarTagTb.Text == "" || ColorTb.Text == "" || BreedTb.Text == "" || WeightTb.Text == "" || AgeTb.Text == "" || PastureTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+
+                    string Query = "insert into CowTbl (CowName, EarTag, Color, Breed, Age, WeightAtBirth, Pasture) values ('"+ CowNameTb.Text +"', '" + EarTagTb.Text + "', '" + ColorTb.Text + "', '" + BreedTb.Text + "', "+ age +", '" + WeightTb.Text + "', '" + PastureTb.Text +"')"; // It's very important to write the same numbers of fields and values ... // https://es.stackoverflow.com/questions/115201/alguna-forma-de-insertar-registros-cuando-la-tabla-tiene-default-e-identity-en
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow save successfully");
+
+                    Con.Close();
+
+                } catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void DOBDate_ValueChanged(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+            MessageBox.Show("" + age);
+        }
+
+        private void DOBDate_MouseLeave(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+            AgeTb.Text = "" + age;
         }
     }
 }

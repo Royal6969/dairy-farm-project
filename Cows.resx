@@ -9892,7 +9892,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHahSURBVHhe7Z0H
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHahSURBVHhe7Z0H
         eBTV+v+99/7q/3eLSSj23pMAEpWSTugdpFfpvffem/SSANIUAQFRQJooSBKQJghIUVB6EiAhBQGp4f3P
         WU6uYfNuMrs7Mzuz+/08z+fxXrLTZ8773dmZcx4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsDxxG6+8
         FLsp9YO4TWlTFb+auzEtIW5j2gHF7+I2pn6hOHHuptQGymeekJMAAAAAwIos/Pqaf9zGqwOU4n5UKfSk
@@ -15748,7 +15748,7 @@
         IjfOKUmsxGSZykq0JLGSxCY/Af8DWaI+tQGmJhIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="CowNameTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15758,7 +15758,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EarTagTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15768,7 +15768,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BreedTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15778,7 +15778,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ColorTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15788,7 +15788,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AgeTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15798,7 +15798,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="WeightTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
@@ -15808,7 +15808,7 @@
         gDwhA/KEDMgTMiBPyIA8IQPyhAzI+wvZWutzDjOz0k67bsYAysb4AQMfrohgjkgAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PastureTb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATIAAAA7CAYAAAD4vga5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAD9SURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnJPRSBfMZ
