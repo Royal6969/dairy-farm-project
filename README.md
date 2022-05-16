@@ -153,9 +153,9 @@
   Now we just need to connect the tables among them with foreign keys,
   but we will get it continuing the project development and throughout code all sections...
   
-  👨‍💻 Let's start coding the Backend !!
+  # 👨‍💻 Let's start coding the Backend !!
 
-  Let's start coding Cows section.
+  ## ① Cow Module 🐄
   
   In each field properties, set a (Name).
   Then, double click in a button for example, to go to code class.
@@ -224,4 +224,96 @@
   In server explorer view, if you do right click in a table, you can press the option "view data table"
 
   ![cow-saved-data](./img/readme/cow-saved-data.png)
+
+  Now, we have to display tables in the dataGrid view.
+
+  You have to change the property (name) for DataGridView,
+  and create the typical populate function.
+  Once we have it, set it in the initializer class method.
+
+  ```csharp
+        private void populate()
+        {
+            Con.Open();
+
+            string query = "select * from CowTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CowsDGV.DataSource = ds.Tables[0];
+
+            Con.Close();
+        }
+  ```
+  
+  ![cow-list-working](./img/readme/cow-list-works.png)
+
+  To can edit data in dataGridView, we need to develop its function:
+  
+  ```csharp
+        int key = 0;
+        private void CowsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowNameTb.Text = CowsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            EarTagTb.Text = CowsDGV.SelectedRows[0].Cells[2].Value.ToString();
+            ColorTb.Text = CowsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BreedTb.Text = CowsDGV.SelectedRows[0].Cells[4].Value.ToString();
+
+            if(CowNameTb.Text == "")
+            {
+                key = 0;
+                age = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[0].Value.ToString());
+                age = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[5].Value.ToString());
+            }
+
+            WeightTb.Text = CowsDGV.SelectedRows[0].Cells[6].Value.ToString();
+            PastureTb.Text = CowsDGV.SelectedRows[0].Cells[7].Value.ToString();
+        }
+  ```
+
+  And to delete a cow object, it's looks like Save button code:
+
+  ```csharp
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Select the cow to be deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+
+                    string Query = "delete from CowTbl where CowId=" + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow deleted successfully");
+
+                    Con.Close();
+                    populate();
+                    Clear();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+  ```
+
+  Finally, for Edit button, it's the same code like Save button, but just changing the query string:
+
+  ```csharp
+  string Query = "update CowTbl set CowName='"+ CowNameTb.Text +"', EarTag='"+ EarTagTb.Text +"', Color='"+ ColorTb.Text +"', Breed='"+ BreedTb.Text +"', Age='"+ age +"', WeightAtBirth='"+ WeightTb.Text +"', Pasture='"+ PastureTb.Text +"' where CowId="+ key +";";
+  ```
+
+  ## ② Production Module 🥛
 
