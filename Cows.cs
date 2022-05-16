@@ -115,7 +115,7 @@ namespace dairy_farm_project
                     string Query = "insert into CowTbl (CowName, EarTag, Color, Breed, Age, WeightAtBirth, Pasture) values ('"+ CowNameTb.Text +"', '" + EarTagTb.Text + "', '" + ColorTb.Text + "', '" + BreedTb.Text + "', "+ age +", '" + WeightTb.Text + "', '" + PastureTb.Text +"')"; // It's very important to write the same numbers of fields and values ... // https://es.stackoverflow.com/questions/115201/alguna-forma-de-insertar-registros-cuando-la-tabla-tiene-default-e-identity-en
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cow save successfully");
+                    MessageBox.Show("Cow saved successfully");
 
                     Con.Close();
                     populate();
@@ -140,7 +140,7 @@ namespace dairy_farm_project
             AgeTb.Text = "" + age;
         }
 
-        // to dsiplay data
+        // to display data
         private void populate()
         {
             Con.Open();

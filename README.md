@@ -317,3 +317,132 @@
 
   ## ② Production Module 🥛
 
+  We have to repeat part of proccess before...
+  In Program.cs change to Application.Run(new Production()),
+  in Production.cs(design) change (Name) field for differents buttons...
+
+  And now, let's fill the CowId comboBox with CowTbl table,
+  and for that, we have to copy/paste the same SqlConnection that we used in Cow module,
+  and create the fillCowId() method and place it in the initializer method:
+
+  ```csharp
+        private void fillCowId()
+        {
+            Con.Open();
+
+            SqlCommand cmd = new SqlCommand("select CowId from CowTbl", Con);
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CowId", typeof(int));
+            dt.Load(Rdr);
+            CowIdCb.ValueMember = "CowId";
+            CowIdCb.DataSource = dt;
+
+            Con.Close();
+        }
+  ```
+
+  Populate() function is the same too, just changing the table,
+  also, Clear() function it's the same but changing the fields names.
+
+  Now, whenever a cow Id id selected, it's name should be displayed in CowNameTb
+  Note: CowName field has to be not enabled (false)
+
+  ```csharp
+        private void GetCowName()
+        {
+            Con.Open();
+
+            string query = "select * from CowTbl where CowId="+ CowIdCb.SelectedValue.ToString() +"";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+
+            foreach(DataRow dr in dt.Rows)
+                CowNameTb.Text = dr["CowName"].ToString();
+
+            Con.Close();
+        }
+  ```
+
+  For Save button we change the fields we check in if() sentence,
+  and now, we have to auto-generate a special function that you will find in properties:
+
+  ![selection-change-committed](./img/readme/selection-change-committed.png)
+
+  ```csharp
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || AmTb.Text == "" || NoonTb.Text == "" || PmTb.Text == "" || TotalTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+
+                    string Query = "insert into MilkTbl (CowId, CowName, AmMilk, NoonMilk, PmMilk, TotalMilk, DateProd) values ("+ CowIdCb.SelectedValue.ToString() +", '" + CowNameTb.Text + "', '" + AmTb.Text + "', '" + NoonTb.Text + "', '" + PmTb.Text + "', '" + TotalTb.Text + "', '"+ DateTb.Value.Date +"')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk saved successfully");
+
+                    Con.Close();
+                    populate();
+                    Clear();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+   ```
+
+  Now, let's calculate automatically the total,
+  and to do that, let's auto-generate the leave function for PmMilk field
+  (look for that in properties)
+
+  ![calculate-total-leave-function](./img/readme/pmMilk-leave.png)
+
+  ```csharp
+    private void PmTb_Leave(object sender, EventArgs e)
+    {
+        int total = Convert.ToInt32(AmTb.Text) + Convert.ToInt32(NoonTb.Text) + Convert.ToInt32(PmTb.Text);
+        TotalTb.Text = "" + total;
+    }
+  ```
+
+  ![test-production-module-1](./img/readme/test-production-module-1.png)
+
+  ![test-production-module-2](./img/readme/test-production-module-2.png)
+
+  To auto-fill fields selecting an object from DataGridView, 
+  it's very similar to the same DGV function in Cows module, but changing the fields:
+  
+  ```csharp
+        private void MilkDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowIdCb.SelectedValue = MilkDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNameTb.Text = MilkDGV.SelectedRows[0].Cells[2].Value.ToString();
+            AmTb.Text = MilkDGV.SelectedRows[0].Cells[3].Value.ToString();
+            NoonTb.Text = MilkDGV.SelectedRows[0].Cells[4].Value.ToString();
+            PmTb.Text = MilkDGV.SelectedRows[0].Cells[5].Value.ToString();
+            TotalTb.Text = MilkDGV.SelectedRows[0].Cells[6].Value.ToString();
+            DateTb.Text = MilkDGV.SelectedRows[0].Cells[7].Value.ToString();
+
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(MilkDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+  ```
+
