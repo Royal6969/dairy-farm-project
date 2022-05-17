@@ -165,7 +165,9 @@
   and press in properties, you will see in Properties view the "connection statement",
   and you have to copy that, to paste it in this sentence:
   
+  ```csharp
   SqlConnection Con = new SqlConnection(@"Data Source=SERGIODIAZ\SQLEXPRESS;Initial Catalog=DairyFarm;Integrated Security=True");
+  ```
 
   In the properties view of datepicker, look for the property ValueChange and do double click to autogenerate its function.
   Repeat it with the property MouseLeave.
@@ -448,8 +450,8 @@
 
   ## ④ Health Module 💊
 
-    1. Gso to Health module and delete the DataGridView, and better copy de DataGridView we made in Production module
-    2. change its (name) to HealthDGV, and change the other fields (names).
+    1. Go to Health module and delete the DataGridView, and better copy de DataGridView we made in Production module
+    2. Change its (name) to HealthDGV, and change the other fields (names).
     3. Copy the sqlConnection sentence with fillCowId(), populate(), clear(), and GetCowName() functions. (import System.Data.SqlClient)
     4. Change words (Milk -> Health) in some sentences...
     5. Set the fillCowId() and populate() functions in the initializer method.
@@ -459,4 +461,14 @@
     9. For DGV, copy/paste de function content in Production module and change the fields.
     10. Same process with delete function
     11. And once again, same process with edit function, copy content from Production module, double click in Edit button to auto-generate function, change fields...
+
+  ## ⑤ Breeding Module 🍼
+
+  You just have to follow the same steps but with one difference,
+  you also need to get the cow age you are selecting, and to do that,
+  simply add this sentence in the forEach() in GetCowName() function:
+
+  ```csharp
+  AgeTb.Text = dr["Age"].ToString();
+  ```
 
