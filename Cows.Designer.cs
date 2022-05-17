@@ -482,7 +482,7 @@
             this.CowNameTb.Padding = new System.Windows.Forms.Padding(3);
             this.CowNameTb.PasswordChar = '\0';
             this.CowNameTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.CowNameTb.PlaceholderText = "Enter text";
+            this.CowNameTb.PlaceholderText = "";
             this.CowNameTb.ReadOnly = false;
             this.CowNameTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CowNameTb.SelectedText = "";
@@ -496,7 +496,7 @@
             this.CowNameTb.TextMarginBottom = 0;
             this.CowNameTb.TextMarginLeft = 3;
             this.CowNameTb.TextMarginTop = 1;
-            this.CowNameTb.TextPlaceholder = "Enter text";
+            this.CowNameTb.TextPlaceholder = "";
             this.CowNameTb.UseSystemPasswordChar = false;
             this.CowNameTb.WordWrap = true;
             // 
@@ -557,7 +557,7 @@
             this.EarTagTb.Padding = new System.Windows.Forms.Padding(3);
             this.EarTagTb.PasswordChar = '\0';
             this.EarTagTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.EarTagTb.PlaceholderText = "Enter text";
+            this.EarTagTb.PlaceholderText = "";
             this.EarTagTb.ReadOnly = false;
             this.EarTagTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.EarTagTb.SelectedText = "";
@@ -571,7 +571,7 @@
             this.EarTagTb.TextMarginBottom = 0;
             this.EarTagTb.TextMarginLeft = 3;
             this.EarTagTb.TextMarginTop = 1;
-            this.EarTagTb.TextPlaceholder = "Enter text";
+            this.EarTagTb.TextPlaceholder = "";
             this.EarTagTb.UseSystemPasswordChar = false;
             this.EarTagTb.WordWrap = true;
             // 
@@ -644,7 +644,7 @@
             this.BreedTb.Padding = new System.Windows.Forms.Padding(3);
             this.BreedTb.PasswordChar = '\0';
             this.BreedTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.BreedTb.PlaceholderText = "Enter text";
+            this.BreedTb.PlaceholderText = "";
             this.BreedTb.ReadOnly = false;
             this.BreedTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.BreedTb.SelectedText = "";
@@ -658,7 +658,7 @@
             this.BreedTb.TextMarginBottom = 0;
             this.BreedTb.TextMarginLeft = 3;
             this.BreedTb.TextMarginTop = 1;
-            this.BreedTb.TextPlaceholder = "Enter text";
+            this.BreedTb.TextPlaceholder = "";
             this.BreedTb.UseSystemPasswordChar = false;
             this.BreedTb.WordWrap = true;
             // 
@@ -731,7 +731,7 @@
             this.ColorTb.Padding = new System.Windows.Forms.Padding(3);
             this.ColorTb.PasswordChar = '\0';
             this.ColorTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.ColorTb.PlaceholderText = "Enter text";
+            this.ColorTb.PlaceholderText = "";
             this.ColorTb.ReadOnly = false;
             this.ColorTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.ColorTb.SelectedText = "";
@@ -745,7 +745,7 @@
             this.ColorTb.TextMarginBottom = 0;
             this.ColorTb.TextMarginLeft = 3;
             this.ColorTb.TextMarginTop = 1;
-            this.ColorTb.TextPlaceholder = "Enter text";
+            this.ColorTb.TextPlaceholder = "";
             this.ColorTb.UseSystemPasswordChar = false;
             this.ColorTb.WordWrap = true;
             // 
@@ -819,7 +819,7 @@
             this.AgeTb.Padding = new System.Windows.Forms.Padding(3);
             this.AgeTb.PasswordChar = '\0';
             this.AgeTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.AgeTb.PlaceholderText = "Enter text";
+            this.AgeTb.PlaceholderText = "";
             this.AgeTb.ReadOnly = false;
             this.AgeTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.AgeTb.SelectedText = "";
@@ -833,7 +833,7 @@
             this.AgeTb.TextMarginBottom = 0;
             this.AgeTb.TextMarginLeft = 3;
             this.AgeTb.TextMarginTop = 1;
-            this.AgeTb.TextPlaceholder = "Enter text";
+            this.AgeTb.TextPlaceholder = "";
             this.AgeTb.UseSystemPasswordChar = false;
             this.AgeTb.WordWrap = true;
             // 
@@ -929,7 +929,7 @@
             this.WeightTb.Padding = new System.Windows.Forms.Padding(3);
             this.WeightTb.PasswordChar = '\0';
             this.WeightTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.WeightTb.PlaceholderText = "Enter text";
+            this.WeightTb.PlaceholderText = "";
             this.WeightTb.ReadOnly = false;
             this.WeightTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.WeightTb.SelectedText = "";
@@ -943,7 +943,7 @@
             this.WeightTb.TextMarginBottom = 0;
             this.WeightTb.TextMarginLeft = 3;
             this.WeightTb.TextMarginTop = 1;
-            this.WeightTb.TextPlaceholder = "Enter text";
+            this.WeightTb.TextPlaceholder = "";
             this.WeightTb.UseSystemPasswordChar = false;
             this.WeightTb.WordWrap = true;
             // 
@@ -1016,7 +1016,7 @@
             this.PastureTb.Padding = new System.Windows.Forms.Padding(3);
             this.PastureTb.PasswordChar = '\0';
             this.PastureTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.PastureTb.PlaceholderText = "Enter text";
+            this.PastureTb.PlaceholderText = "";
             this.PastureTb.ReadOnly = false;
             this.PastureTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.PastureTb.SelectedText = "";
@@ -1030,7 +1030,7 @@
             this.PastureTb.TextMarginBottom = 0;
             this.PastureTb.TextMarginLeft = 3;
             this.PastureTb.TextMarginTop = 1;
-            this.PastureTb.TextPlaceholder = "Enter text";
+            this.PastureTb.TextPlaceholder = "";
             this.PastureTb.UseSystemPasswordChar = false;
             this.PastureTb.WordWrap = true;
             // 
@@ -1246,7 +1246,7 @@
             this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Enter text";
+            this.bunifuTextBox1.PlaceholderText = "";
             this.bunifuTextBox1.ReadOnly = false;
             this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox1.SelectedText = "";
@@ -1260,7 +1260,7 @@
             this.bunifuTextBox1.TextMarginBottom = 0;
             this.bunifuTextBox1.TextMarginLeft = 3;
             this.bunifuTextBox1.TextMarginTop = 1;
-            this.bunifuTextBox1.TextPlaceholder = "Enter text";
+            this.bunifuTextBox1.TextPlaceholder = "";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 

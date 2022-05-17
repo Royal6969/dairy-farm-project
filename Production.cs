@@ -228,6 +228,7 @@ namespace dairy_farm_project
             }
         }
 
+        // delete button
         private void button3_Click(object sender, EventArgs e)
         {
             if (key == 0)
@@ -257,6 +258,7 @@ namespace dairy_farm_project
             }
         }
 
+        // edit button
         private void button2_Click(object sender, EventArgs e)
         {
             if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || AmTb.Text == "" || NoonTb.Text == "" || PmTb.Text == "" || TotalTb.Text == "")

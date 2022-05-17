@@ -10,15 +10,15 @@
  ![WinsFormsApp](./img/readme/wfa.png)
 
 
- ⏱ ##To follow my commit changes
+ ⏱ ## To follow my commit changes
  - https://github.com/Royal6969/dairy-farm-project/commits/main
 
 
- 👓 ##How to show toolbox and solution explorer and style properties in visual studio
+ 👓 ## How to show toolbox and solution explorer and style properties in visual studio
  - https://www.youtube.com/watch?v=lms7X_b1-dY&ab_channel=TamtamQuinn
 
 
- 🎨 ##For some UI components styles, I will use Bunifu Framework
+ 🎨 ## For some UI components styles, I will use Bunifu Framework
   - It requires a paid license, but we can crack it...
   - https://docs2.bunifuframework.com/docs/getting-started/install
   - https://www.youtube.com/watch?v=1QZHT9by2xo&ab_channel=C%C3%B3digoLimpio
@@ -29,7 +29,7 @@
   - https://www.youtube.com/watch?v=vJ7yB_pZ3a0
 
 
- 📝 ##Basic structure to start
+ 📝 ## Basic structure to start
  We start with a form template that we rename to Splash.cs (preload screen),
  and after that, we create the Login.cs (login screen) adding a new class element (type Windows Forms)
  
@@ -38,7 +38,7 @@
  ![0.Splash](./img/readme/0.splash.png)
  ![0.Login](./img/readme/0.login.png)
  
- #Let's start with the frontend, so we're going to design the pages (sections)
+ # Let's start with the frontend, so we're going to design the pages (sections)
 
  ① Cows List (CRUD)
 
@@ -445,4 +445,18 @@
             }
         }
   ```
+
+  ## ④ Health Module 💊
+
+    1. Gso to Health module and delete the DataGridView, and better copy de DataGridView we made in Production module
+    2. change its (name) to HealthDGV, and change the other fields (names).
+    3. Copy the sqlConnection sentence with fillCowId(), populate(), clear(), and GetCowName() functions. (import System.Data.SqlClient)
+    4. Change words (Milk -> Health) in some sentences...
+    5. Set the fillCowId() and populate() functions in the initializer method.
+    6. Auto-generate CowIdCb_SelectionChangeCommittted() function, and insert inside it the GetCowName() function (also disable CowName field)
+    7. Auto-generate save function doing double click in Save button, and copy/paste the Save button content we made in Production module, and change its fields.
+    8. Auto-generate clear function doing double click in Clear button (I changed "update" to "clear"), and set the Clear() function we made before
+    9. For DGV, copy/paste de function content in Production module and change the fields.
+    10. Same process with delete function
+    11. And once again, same process with edit function, copy content from Production module, double click in Edit button to auto-generate function, change fields...
 
