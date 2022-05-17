@@ -16,7 +16,7 @@ namespace dairy_farm_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Breedings());
+            Application.Run(new Employees());
         }
     }
 }

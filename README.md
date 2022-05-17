@@ -472,3 +472,18 @@
   AgeTb.Text = dr["Age"].ToString();
   ```
 
+  ## ⑥ Employees Module ‍💼
+
+    1. Add a new element --> Form (Windows Forms)
+    2. At first, remember... position (center screen), formBorderStyle (none), copy Cow module measures for paste in Employees module size,
+    3. Copy all design from Health module to Employees module, and delete the sidebar content (sections links).
+    4. Change the design, for example, removing some containers and replacing the others.
+    5. Change fields (names) and its titles (text).
+    6. Copy SqlConnection sentence and the populate() function from Health.cs for example (change some words, and set populate() function in the initializer method).
+    7. Copy save function content from Production module for example, to save function in Employees module. (don't forget to refer to Gender as GenderCb.SelectedIndex in checks and as GenderCb.SelectedItem for its value)
+    8. Copy DVG function content from Cows module for example, to select any employee in list.
+    9. The Clear button with its clear function...
+    10. Copy delete function content from Health module for example, to delete any employee.
+    11. Copy edit function content from Cows module for example, to edit any employee.
+
+  

@@ -86,3 +86,4 @@ C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Dashb
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Finances.resources
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Health.resources
 C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Sales.resources
+C:\Users\Sergio DC\Desktop\dairy-farm-project\obj\Debug\dairy_farm_project.Employees.resources
