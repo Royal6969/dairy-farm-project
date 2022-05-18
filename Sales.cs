@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace dairy_farm_project
         public Sales()
         {
             InitializeComponent();
+            fillEmpId();
+            populate();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -93,5 +96,90 @@ namespace dairy_farm_project
             Ob.Show();
             this.Hide();
         }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=SERGIODIAZ\SQLEXPRESS;Initial Catalog=DairyFarm;Integrated Security=True");
+
+        private void fillEmpId()
+        {
+            Con.Open();
+
+            SqlCommand cmd = new SqlCommand("select EmpId from EmployeeTbl", Con); 
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("EmpId", typeof(int));
+            dt.Load(Rdr);
+            EmpIdCb.ValueMember = "EmpId";
+            EmpIdCb.DataSource = dt;
+
+            Con.Close();
+        }
+
+        // to display data
+        private void populate()
+        {
+            Con.Open();
+
+            string query = "select * from SalesTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            SalesDGV.DataSource = ds.Tables[0];
+
+            Con.Close();
+        }
+
+        private void Clear()
+        {
+            PriceTb.Text = "";
+            ClientNameTb.Text = "";
+            PhoneTb.Text = "";
+            QuantityTb.Text = "";
+            TotalTb.Text = "";
+        }
+
+        private void QuantityTb_Leave(object sender, EventArgs e)
+        {
+            int total = Convert.ToInt32(PriceTb.Text) * Convert.ToInt32(QuantityTb.Text);
+            TotalTb.Text = "" + total;
+        }
+
+        // save button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (EmpIdCb.SelectedIndex == -1 || DateTb.Text == "" || PriceTb.Text == "" || ClientNameTb.Text == "" || PhoneTb.Text == "" || QuantityTb.Text == "" || TotalTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+
+                    string Query = "insert into SalesTbl (Date, Uprice, ClientName, ClientPhone, EmpId, Quantity, Amount) values ('" + DateTb.Value.Date + "', '" + PriceTb.Text + "', '" + ClientNameTb.Text + "', '" + PhoneTb.Text + "', '" + EmpIdCb.SelectedValue.ToString() + "', '" + QuantityTb.Text + "', '" + TotalTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk sold successfully");
+
+                    Con.Close();
+                    populate();
+                    Clear();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        
     }
 }

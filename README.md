@@ -486,4 +486,14 @@
     10. Copy delete function content from Health module for example, to delete any employee.
     11. Copy edit function content from Cows module for example, to edit any employee.
 
-  
+  ![employee-design](./img/readme/employee.png)
+
+  ## ⑦ Sales Module 💶
+
+  Repeat same steps before to do this module,
+  the only difference is you have to fetch data from Employee table,
+  so be careful for the sentences affected !
+  Don't forget the Quantity button leave function we made before... 
+
+  ![sales-design](./img/readme/sales.png)
+
