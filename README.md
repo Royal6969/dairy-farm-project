@@ -497,3 +497,25 @@
 
   ![sales-design](./img/readme/sales.png)
 
+  ## ⑧ Finances Module 📈
+
+  Once again, repeat the same steps before.
+  Realize you have to do functoons x2 because you have two tables here.
+  
+  Another detail, when you have the income save funcion, copy/paste it in Sales module,
+  because sales is an income finance operation.
+  Whenever we sale milk, the operation should be stored in Income table.
+
+  Now let's filter expenses and incomes by day.
+  Just copy/paste populateIncomes() and populate Expenditures() functions and ...
+
+  ```csharp
+  string query = "select * from IncomeTbl where IncDate='" + IncDatePickerTb.Value.Date + "'";
+
+  string query = "select * from ExpenditureTbl where ExpDate='" + ExpDatePickerTb.Value.Date + "'";
+  ```
+
+  And for refresh buttons, just add an image and click it to auto-generate its click function, and set its populate inside it.
+
+  ![finances-design](./img/readme/finances.png)
+

@@ -165,6 +165,7 @@ namespace dairy_farm_project
 
                     Con.Close();
                     populate();
+                    SaveTransaction();
                     Clear();
 
                 }
@@ -172,6 +173,27 @@ namespace dairy_farm_project
                 {
                     MessageBox.Show(Ex.Message);
                 }
+            }
+        }
+
+        private void SaveTransaction()
+        {
+            try
+            {
+                Con.Open();
+
+                string sales = "Sales";
+                string Query = "insert into IncomeTbl (IncDate, IncPurpose, IncAmt, EmpId) values ('" + DateTb.Value.Date + "', '" + sales + "', '" + TotalTb.Text + "', '" + EmpIdCb.SelectedValue.ToString() + "')";
+                SqlCommand cmd = new SqlCommand(Query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Income saved successfully");
+
+                Con.Close();
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
             }
         }
 
