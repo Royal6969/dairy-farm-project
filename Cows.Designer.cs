@@ -88,6 +88,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CowNameTb = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -112,7 +114,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.CowFilterTb = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -131,6 +133,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowsDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -394,12 +398,36 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Controls.Add(this.pictureBox10);
+            this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(311, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1622, 78);
             this.panel2.TabIndex = 2;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(1290, 13);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 14;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(1359, 13);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 13;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // label1
             // 
@@ -1189,80 +1217,81 @@
             this.label18.TabIndex = 9;
             this.label18.Text = "Manage Cows";
             // 
-            // bunifuTextBox1
+            // CowFilterTb
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.AutoSizeHeight = true;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 1;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(692, 575);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.CowFilterTb.AcceptsReturn = false;
+            this.CowFilterTb.AcceptsTab = false;
+            this.CowFilterTb.AnimationSpeed = 200;
+            this.CowFilterTb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.CowFilterTb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.CowFilterTb.AutoSizeHeight = true;
+            this.CowFilterTb.BackColor = System.Drawing.Color.White;
+            this.CowFilterTb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CowFilterTb.BackgroundImage")));
+            this.CowFilterTb.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.CowFilterTb.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.CowFilterTb.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CowFilterTb.BorderColorIdle = System.Drawing.Color.Silver;
+            this.CowFilterTb.BorderRadius = 1;
+            this.CowFilterTb.BorderThickness = 1;
+            this.CowFilterTb.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.CowFilterTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CowFilterTb.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.CowFilterTb.DefaultText = "";
+            this.CowFilterTb.FillColor = System.Drawing.Color.White;
+            this.CowFilterTb.HideSelection = true;
+            this.CowFilterTb.IconLeft = null;
+            this.CowFilterTb.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.CowFilterTb.IconPadding = 10;
+            this.CowFilterTb.IconRight = null;
+            this.CowFilterTb.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.CowFilterTb.Lines = new string[0];
+            this.CowFilterTb.Location = new System.Drawing.Point(692, 575);
+            this.CowFilterTb.MaxLength = 32767;
+            this.CowFilterTb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.CowFilterTb.Modified = false;
+            this.CowFilterTb.Multiline = false;
+            this.CowFilterTb.Name = "CowFilterTb";
             stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties29.FillColor = System.Drawing.Color.Empty;
             stateProperties29.ForeColor = System.Drawing.Color.Empty;
             stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties29;
+            this.CowFilterTb.OnActiveState = stateProperties29;
             stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox1.OnDisabledState = stateProperties30;
+            this.CowFilterTb.OnDisabledState = stateProperties30;
             stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties31.FillColor = System.Drawing.Color.Empty;
             stateProperties31.ForeColor = System.Drawing.Color.Empty;
             stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties31;
+            this.CowFilterTb.OnHoverState = stateProperties31;
             stateProperties32.BorderColor = System.Drawing.Color.Silver;
             stateProperties32.FillColor = System.Drawing.Color.White;
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties32;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(225, 40);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.bunifuTextBox1.TabIndex = 30;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 3;
-            this.bunifuTextBox1.TextMarginTop = 1;
-            this.bunifuTextBox1.TextPlaceholder = "";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.CowFilterTb.OnIdleState = stateProperties32;
+            this.CowFilterTb.Padding = new System.Windows.Forms.Padding(3);
+            this.CowFilterTb.PasswordChar = '\0';
+            this.CowFilterTb.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.CowFilterTb.PlaceholderText = "";
+            this.CowFilterTb.ReadOnly = false;
+            this.CowFilterTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CowFilterTb.SelectedText = "";
+            this.CowFilterTb.SelectionLength = 0;
+            this.CowFilterTb.SelectionStart = 0;
+            this.CowFilterTb.ShortcutsEnabled = true;
+            this.CowFilterTb.Size = new System.Drawing.Size(225, 40);
+            this.CowFilterTb.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.CowFilterTb.TabIndex = 30;
+            this.CowFilterTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CowFilterTb.TextMarginBottom = 0;
+            this.CowFilterTb.TextMarginLeft = 3;
+            this.CowFilterTb.TextMarginTop = 1;
+            this.CowFilterTb.TextPlaceholder = "";
+            this.CowFilterTb.UseSystemPasswordChar = false;
+            this.CowFilterTb.WordWrap = true;
+            this.CowFilterTb.TextChanged += new System.EventHandler(this.CowFilterTb_TextChanged);
             // 
             // label19
             // 
@@ -1283,7 +1312,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1933, 1169);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.bunifuTextBox1);
+            this.Controls.Add(this.CowFilterTb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -1338,6 +1367,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1394,7 +1425,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label18;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextBox CowFilterTb;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

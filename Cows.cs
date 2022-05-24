@@ -256,5 +256,36 @@ namespace dairy_farm_project
                 }
             }
         }
+
+        // close app button
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // minimize windows
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void SearchCow()
+        {
+            Con.Open();
+
+            string query = "select * from CowTbl where CowName like '%" + CowFilterTb.Text + "%'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CowsDGV.DataSource = ds.Tables[0];
+
+            Con.Close();
+        }
+
+        // filter box
+        private void CowFilterTb_TextChanged(object sender, EventArgs e)
+        {
+            SearchCow();
+        }
     }
 }

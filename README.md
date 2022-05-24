@@ -680,3 +680,28 @@
   exit, and now login as the new employee you created before.
   It should work !!
 
+  ## ⑪ Extra Features 🛠️
+
+    - Minimize and Close app button
+    - Filter function (Cows module)
+
+  ```csharp
+        private void SearchCow()
+        {
+            Con.Open();
+
+            string query = "select * from CowTbl where CowName like '%" + CowFilterTb.Text + "%'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CowsDGV.DataSource = ds.Tables[0];
+
+            Con.Close();
+        }
+
+        // filter box
+        private void CowFilterTb_TextChanged(object sender, EventArgs e)
+        {
+            SearchCow();
+        }
+  ```

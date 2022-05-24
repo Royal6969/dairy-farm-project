@@ -202,6 +202,16 @@ namespace dairy_farm_project
             Clear();
         }
 
-        
+        // close app button
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // minimize windows
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

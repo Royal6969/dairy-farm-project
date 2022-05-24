@@ -273,5 +273,17 @@ namespace dairy_farm_project
         {
             populateExpenditures();
         }
+
+        // close app button
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // minimize windows
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

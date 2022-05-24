@@ -85,5 +85,17 @@ namespace dairy_farm_project
             UnameTb.Text = "";
             PasswordTb.Text = "";
         }
+
+        // close app button
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // minimize windows
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
