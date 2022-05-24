@@ -519,3 +519,92 @@
 
   ![finances-design](./img/readme/finances.png)
 
+  ## ⑨ Dashboard Module 📊
+
+  Firstable, redesign it.
+  Note: to gradient colors, look for "FillColor1" and "FillColor2" properties.
+
+  In Finnace square, we have to calculate the finance panel.
+  Copy/paste SqlConnection and create a funcyion to get (sum) IncAmt field in IncomeTbl.
+
+  ```csharp
+        private void Finance()
+        {
+            // we calculate the Finance related Analytics
+
+            Con.Open();
+
+            int inc, exp; 
+            double bal;
+
+            SqlDataAdapter sda1 = new SqlDataAdapter("select sum(IncAmt) from IncomeTbl", Con);
+            
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            inc = Convert.ToInt32(dt1.Rows[0][0].ToString());
+            IncLbl.Text = "Rs: " + dt1.Rows[0][0].ToString();
+
+            SqlDataAdapter sda2 = new SqlDataAdapter("select sum(ExpAmount) from ExpenditureTbl", Con);
+
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            exp = Convert.ToInt32(dt2.Rows[0][0].ToString());
+            ExpLbl.Text = "Rs: " + dt2.Rows[0][0].ToString();
+
+            bal = inc - exp;
+            BalLbl.Text = "Rs: " + bal;
+
+            Con.Close();
+        }
+  ```
+
+  We can do something similar for Logistic square and max values.
+
+  ```csharp
+        private void Logistic()
+        {
+            // we calculate the Logistics related Analytics
+
+            Con.Open();
+
+            SqlDataAdapter sda1 = new SqlDataAdapter("select count(*) from CowTbl", Con);
+
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            CowNumLbl.Text = dt1.Rows[0][0].ToString();
+
+            SqlDataAdapter sda2 = new SqlDataAdapter("select sum(TotalMilk) from MilkTbl", Con);
+
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            MilkLitersLbl.Text = dt2.Rows[0][0].ToString() + " liters";
+
+            SqlDataAdapter sda3 = new SqlDataAdapter("select count(*) from EmployeeTbl", Con);
+
+            DataTable dt3 = new DataTable();
+            sda3.Fill(dt3);
+            EmpNumLbl.Text = dt3.Rows[0][0].ToString();
+
+            Con.Close();
+        }
+
+        private void GetMax()
+        {
+            SqlDataAdapter sda1 = new SqlDataAdapter("select max(IncAmt) from IncomeTbl", Con);
+
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            HighSaleLbl.Text = "Rs: " + dt1.Rows[0][0].ToString();
+
+            SqlDataAdapter sda2 = new SqlDataAdapter("select max(ExpAmount) from ExpeditureTbl", Con);
+
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            HighExpLbl.Text = "Rs: " + dt2.Rows[0][0].ToString();
+        }
+  ```
+
+  Note: add these functions to initializer method.
+
+  ![dashboar-redesign](./img/readme/dashboard.png)
+

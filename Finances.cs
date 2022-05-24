@@ -193,7 +193,7 @@ namespace dairy_farm_project
         // save expenditures button
         private void button5_Click(object sender, EventArgs e)
         {
-            if (ExpPurposeCb.SelectedIndex == -1 || ExpAmountTb.Text == "")
+            if (ExpPurposeCb.SelectedIndex == -1 || ExpAmountTb.Text == "" || EmpIdCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Information");
             }
@@ -223,7 +223,7 @@ namespace dairy_farm_project
         // save incomes button
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IncPurposeCb.SelectedIndex == -1 || IncAmountTb.Text == "")
+            if (IncPurposeCb.SelectedIndex == -1 || IncAmountTb.Text == "" || EmpIdCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Information");
             }
