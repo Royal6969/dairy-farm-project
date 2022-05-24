@@ -42,13 +42,14 @@ namespace dairy_farm_project
             PhoneTb.Text = "";
             AddressTb.Text = "";
             GenderCb.SelectedIndex = -1;
+            PasswordTb.Text = "";
             key = 0;
         }
 
         // save button
         private void button1_Click(object sender, EventArgs e)
         {
-            if (EmployeeNameTb.Text == "" || GenderCb.SelectedIndex == -1 || PhoneTb.Text == "" || AddressTb.Text == "")
+            if (EmployeeNameTb.Text == "" || GenderCb.SelectedIndex == -1 || PhoneTb.Text == "" || AddressTb.Text == "" || PasswordTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -58,7 +59,7 @@ namespace dairy_farm_project
                 {
                     Con.Open();
 
-                    string Query = "insert into EmployeeTbl (EmpName, EmpDob, Gender, Phone, Address) values ('" + EmployeeNameTb.Text + "', '" + DOBTb.Value.Date + "', '" + GenderCb.SelectedItem.ToString() + "', '" + PhoneTb.Text + "', '" + AddressTb.Text + "')";
+                    string Query = "insert into EmployeeTbl (EmpName, EmpDob, Gender, Phone, Address, EmpPass) values ('" + EmployeeNameTb.Text + "', '" + DOBTb.Value.Date + "', '" + GenderCb.SelectedItem.ToString() + "', '" + PhoneTb.Text + "', '" + AddressTb.Text + "', '" + PasswordTb.Text + "')";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee saved successfully");
@@ -83,6 +84,7 @@ namespace dairy_farm_project
             GenderCb.SelectedItem = EmployeeDGV.SelectedRows[0].Cells[3].Value.ToString();
             PhoneTb.Text = EmployeeDGV.SelectedRows[0].Cells[4].Value.ToString();
             AddressTb.Text = EmployeeDGV.SelectedRows[0].Cells[5].Value.ToString();
+            PasswordTb.Text = EmployeeDGV.SelectedRows[0].Cells[6].Value.ToString();
 
             if (EmployeeNameTb.Text == "")
             {
@@ -94,11 +96,13 @@ namespace dairy_farm_project
             }
         }
 
+        // clear button
         private void button4_Click(object sender, EventArgs e)
         {
             Clear();
         }
 
+        // delete button
         private void button3_Click(object sender, EventArgs e)
         {
             if (key == 0)
@@ -128,9 +132,10 @@ namespace dairy_farm_project
             }
         }
 
+        // update button
         private void button2_Click(object sender, EventArgs e)
         {
-            if (EmployeeNameTb.Text == "" || GenderCb.SelectedIndex == -1 || PhoneTb.Text == "" || AddressTb.Text == "")
+            if (EmployeeNameTb.Text == "" || GenderCb.SelectedIndex == -1 || PhoneTb.Text == "" || AddressTb.Text == "" || PasswordTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -140,7 +145,7 @@ namespace dairy_farm_project
                 {
                     Con.Open();
 
-                    string Query = "update EmployeeTbl set EmpName='" + EmployeeNameTb.Text + "', EmpDob='" + DOBTb.Value.Date + "', Gender='" + GenderCb.SelectedItem.ToString() + "', Phone='" + PhoneTb.Text + "', Address='" + AddressTb.Text + "' where EmpId=" + key + ";";
+                    string Query = "update EmployeeTbl set EmpName='" + EmployeeNameTb.Text + "', EmpDob='" + DOBTb.Value.Date + "', Gender='" + GenderCb.SelectedItem.ToString() + "', Phone='" + PhoneTb.Text + "', Address='" + AddressTb.Text + "', EmpPass='" + PasswordTb.Text + "' where EmpId=" + key + ";";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee updated successfully");

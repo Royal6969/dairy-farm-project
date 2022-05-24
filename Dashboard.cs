@@ -153,11 +153,17 @@ namespace dairy_farm_project
 
         private void GetMax()
         {
-            SqlDataAdapter sda1 = new SqlDataAdapter("select max(IncAmt) from IncomeTbl group by IncDate", Con);
+            SqlDataAdapter sda1 = new SqlDataAdapter("select max(IncAmt) from IncomeTbl", Con);
 
             DataTable dt1 = new DataTable();
             sda1.Fill(dt1);
             HighSaleLbl.Text = "Rs: " + dt1.Rows[0][0].ToString();
+
+            SqlDataAdapter sda2 = new SqlDataAdapter("select max(ExpAmount) from ExpeditureTbl", Con);
+
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            HighExpLbl.Text = "Rs: " + dt2.Rows[0][0].ToString();
         }
     }
 }

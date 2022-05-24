@@ -608,3 +608,75 @@
 
   ![dashboar-redesign](./img/readme/dashboard.png)
 
+  ## ⑩ Splash and Login development 🔒
+
+  In Splash component:
+    1. Check (names) for progressBar and splash screen
+    2. Open ToolBox and add a "timer" component, and do double click to auto-generate its function.
+    3. When timer1 arrives to 100, then, go to login screen. (also auto-generate Splash_Load() function to start the timer)
+
+  In Login component:
+    1. Check (names) for Role, UserName and Password. (also look for "Password Char" property)
+    2. You have to open de Employee table definition and add a new field for password (EmpPass, varchar50, allow nulls)
+    3. In Employees.cs (module), add new EmpPass field to anywhere that need it. (check git commit to view changes)
+    4. Create the following function to Login button:
+
+  ```csharp
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (UnameTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Enter user name and password");
+            }
+            else
+            {
+                if (RoleCb.SelectedIndex > -1)
+                {
+                    if (RoleCb.SelectedItem.ToString() == "Admin")
+                    {
+                        if (UnameTb.Text == "Admin" && PasswordTb.Text == "Admin")
+                        {
+                            Employees prod = new Employees();
+                            prod.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("If you are the Admin, enter the correct Id ad Password");
+                        }
+                    }
+                    else
+                    {
+                        Con.Open();
+
+                        SqlDataAdapter sda = new SqlDataAdapter("select count(*) from EmployeeTbl where EmpName='" + UnameTb.Text + "' and EmpPass='" + PasswordTb.Text + "'", Con);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            Cows cow = new Cows();
+                            cow.Show();
+                            this.Hide();
+                            Con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong userName or password");
+                        }
+
+                        Con.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select a Role");
+                }
+            }
+        }
+  ```
+
+  To test it, first, enter like Admin, and create a new employee,
+  exit, and now login as the new employee you created before.
+  It should work !!
+
