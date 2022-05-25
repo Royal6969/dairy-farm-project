@@ -159,7 +159,7 @@ namespace dairy_farm_project
             sda1.Fill(dt1);
             HighSaleLbl.Text = "Rs: " + dt1.Rows[0][0].ToString();
 
-            SqlDataAdapter sda2 = new SqlDataAdapter("select max(ExpAmount) from ExpeditureTbl", Con);
+            SqlDataAdapter sda2 = new SqlDataAdapter("select max(ExpAmount) from ExpenditureTbl", Con);
 
             DataTable dt2 = new DataTable();
             sda2.Fill(dt2);

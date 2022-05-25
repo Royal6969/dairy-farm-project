@@ -1,35 +1,68 @@
-﻿🆕 To create this Windows Form Application, you have to set this options:
- - Language:C#
- - Platform: Windows
- - Type: Desktop
+﻿<!-- TOC -->
+
+- [🆕 To create this Windows Form Application, you have to set this options:](#-to-create-this-windows-form-application-you-have-to-set-this-options)
+    - [⏱ To follow my commit changes](#⏱-to-follow-my-commit-changes)
+    - [🎥 To see the execution of each module](#-to-see-the-execution-of-each-module)
+    - [👓 How to show toolbox and solution explorer and style properties in visual studio](#-how-to-show-toolbox-and-solution-explorer-and-style-properties-in-visual-studio)
+    - [🎨 For some UI components styles, I will use Bunifu Framework](#-for-some-ui-components-styles-i-will-use-bunifu-framework)
+    - [📝 Basic structure to start](#-basic-structure-to-start)
+- [Let's start with the frontend, so we're going to design the pages (sections)](#lets-start-with-the-frontend-so-were-going-to-design-the-pages-sections)
+    - [🔗 Let's connect the different sections with sidebar links.](#-lets-connect-the-different-sections-with-sidebar-links)
+    - [📚 Time to install SQL Server Express for database (basic features)](#-time-to-install-sql-server-express-for-database-basic-features)
+    - [💼 Install Microsoft SQL Management Studio](#-install-microsoft-sql-management-studio)
+    - [🔌 Connect to your new SQL server and create de database](#-connect-to-your-new-sql-server-and-create-de-database)
+    - [📋 Create the tables for the database](#-create-the-tables-for-the-database)
+- [👨‍💻 Let's start coding the Backend !!](#‍-lets-start-coding-the-backend-)
+    - [① Cow Module 🐄](#①-cow-module-)
+    - [② Production Module 🥛](#②-production-module-)
+    - [③ Health Module 💊](#③-health-module-)
+    - [④ Breeding Module 🍼](#④-breeding-module-)
+    - [⑤ Employees Module ‍💼](#⑤-employees-module-‍)
+    - [⑤ Sales Module 💶](#⑤-sales-module-)
+    - [⑦ Finances Module 📈](#⑦-finances-module-)
+    - [⑧ Dashboard Module 📊](#⑧-dashboard-module-)
+    - [⑨ Splash and Login development 🔒](#⑨-splash-and-login-development-)
+    - [⑩ Extra Features 🛠️](#⑩-extra-features-)
+- [👨‍🏫😌❤️ Agradecimientos Especiales ❤️😌👨‍🏫](#‍-agradecimientos-especiales-‍)
+
+<!-- /TOC -->
+
+# 🆕 To create this Windows Form Application, you have to set this options:
+    - Language:C#
+    - Platform: Windows
+    - Type: Desktop
 
  Note: Make sure you have ".NET Desktop Development" extensions installed, and select the option:
- - Windows Forms App (.NET Framework) - A project for creating an application with a Windows Forms (WinForms) user interface
+    - Windows Forms App (.NET Framework) - A project for creating an application with a Windows Forms (WinForms) user interface
 
  ![NET Desktop](./img/readme/NET_desktop.png)
  ![WinsFormsApp](./img/readme/wfa.png)
 
 
- ⏱ ## To follow my commit changes
- - https://github.com/Royal6969/dairy-farm-project/commits/main
+## ⏱ To follow my commit changes
+    - https://github.com/Royal6969/dairy-farm-project/commits/main
 
 
- 👓 ## How to show toolbox and solution explorer and style properties in visual studio
- - https://www.youtube.com/watch?v=lms7X_b1-dY&ab_channel=TamtamQuinn
+## 🎥 To see the execution of each module
+    - https://github.com/Royal6969/dairy-farm-project/issues
 
 
- 🎨 ## For some UI components styles, I will use Bunifu Framework
-  - It requires a paid license, but we can crack it...
-  - https://docs2.bunifuframework.com/docs/getting-started/install
-  - https://www.youtube.com/watch?v=1QZHT9by2xo&ab_channel=C%C3%B3digoLimpio
+## 👓 How to show toolbox and solution explorer and style properties in visual studio
+    - https://www.youtube.com/watch?v=lms7X_b1-dY&ab_channel=TamtamQuinn
+
+
+## 🎨 For some UI components styles, I will use Bunifu Framework
+    - It requires a paid license, but we can crack it...
+    - https://docs2.bunifuframework.com/docs/getting-started/install
+    - https://www.youtube.com/watch?v=1QZHT9by2xo&ab_channel=C%C3%B3digoLimpio
 
   I also installed Guna UI2 Framework, for other styles, and you can get it here (free trial)
-  - https://www.nuget.org/packages/Guna.UI2.WinForms/
+    - https://www.nuget.org/packages/Guna.UI2.WinForms/
   or try to crack it too
-  - https://www.youtube.com/watch?v=vJ7yB_pZ3a0
+    - https://www.youtube.com/watch?v=vJ7yB_pZ3a0
 
 
- 📝 ## Basic structure to start
+## 📝 Basic structure to start
  We start with a form template that we rename to Splash.cs (preload screen),
  and after that, we create the Login.cs (login screen) adding a new class element (type Windows Forms)
  
@@ -38,7 +71,7 @@
  ![0.Splash](./img/readme/0.splash.png)
  ![0.Login](./img/readme/0.login.png)
  
- # Let's start with the frontend, so we're going to design the pages (sections)
+# Let's start with the frontend, so we're going to design the pages (sections)
 
  ① Cows List (CRUD)
 
@@ -68,7 +101,7 @@
 
   ![7.Dashboard](./img/readme/7.dashboard.png)
 
-  ## 🔗 Let's connect the different sections with sidebar links.
+## 🔗 Let's connect the different sections with sidebar links.
   To do that, in each section, in sidebar, we have to do double click in each sidebar button (in link names),
   and code in .cs will open, the label method exactly.
   And you just have to write something like this:
@@ -82,19 +115,19 @@
 
   In this case, the label button section in sidebar pressed was Cows.
 
-  ## 📚 Time to install SQL Server Express for database (basic features)
+## 📚 Time to install SQL Server Express for database (basic features)
 
   https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
   ![installing-sql-server-express](./img/readme/install-sql-server.png)
 
-  ## 💼 Install Microsoft SQL Management Studio
+## 💼 Install Microsoft SQL Management Studio
 
   https://docs.microsoft.com/es-es/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
 
   ![installing-sql-server-management-studio](./img/readme/sql-management-studio.png)
 
-  ## 🔌 Connect to your new SQL server and create de database
+## 🔌 Connect to your new SQL server and create de database
   
     1. In VS, press View in toolbox and select "Server explorer"
     2. Press teh button "Connect with database"
@@ -106,7 +139,7 @@
   ![db-created-server-explorer](./img/readme/database-created.png)
 
 
-  ## 📋 Create the tables for the database
+## 📋 Create the tables for the database
 
   Press right click in "Tables" to add new one, 
   and add all fields you need, with the name, data type, no nulls...
@@ -153,9 +186,9 @@
   Now we just need to connect the tables among them with foreign keys,
   but we will get it continuing the project development and throughout code all sections...
   
-  # 👨‍💻 Let's start coding the Backend !!
+# 👨‍💻 Let's start coding the Backend !!
 
-  ## ① Cow Module 🐄
+## ① Cow Module 🐄
   
   In each field properties, set a (Name).
   Then, double click in a button for example, to go to code class.
@@ -317,7 +350,7 @@
   string Query = "update CowTbl set CowName='"+ CowNameTb.Text +"', EarTag='"+ EarTagTb.Text +"', Color='"+ ColorTb.Text +"', Breed='"+ BreedTb.Text +"', Age='"+ age +"', WeightAtBirth='"+ WeightTb.Text +"', Pasture='"+ PastureTb.Text +"' where CowId="+ key +";";
   ```
 
-  ## ② Production Module 🥛
+## ② Production Module 🥛
 
   We have to repeat part of proccess before...
   In Program.cs change to Application.Run(new Production()),
@@ -448,7 +481,7 @@
         }
   ```
 
-  ## ④ Health Module 💊
+## ③ Health Module 💊
 
     1. Go to Health module and delete the DataGridView, and better copy de DataGridView we made in Production module
     2. Change its (name) to HealthDGV, and change the other fields (names).
@@ -462,7 +495,7 @@
     10. Same process with delete function
     11. And once again, same process with edit function, copy content from Production module, double click in Edit button to auto-generate function, change fields...
 
-  ## ⑤ Breeding Module 🍼
+## ④ Breeding Module 🍼
 
   You just have to follow the same steps but with one difference,
   you also need to get the cow age you are selecting, and to do that,
@@ -472,7 +505,7 @@
   AgeTb.Text = dr["Age"].ToString();
   ```
 
-  ## ⑥ Employees Module ‍💼
+## ⑤ Employees Module ‍💼
 
     1. Add a new element --> Form (Windows Forms)
     2. At first, remember... position (center screen), formBorderStyle (none), copy Cow module measures for paste in Employees module size,
@@ -488,7 +521,7 @@
 
   ![employee-design](./img/readme/employee.png)
 
-  ## ⑦ Sales Module 💶
+## ⑤ Sales Module 💶
 
   Repeat same steps before to do this module,
   the only difference is you have to fetch data from Employee table,
@@ -497,7 +530,7 @@
 
   ![sales-design](./img/readme/sales.png)
 
-  ## ⑧ Finances Module 📈
+## ⑦ Finances Module 📈
 
   Once again, repeat the same steps before.
   Realize you have to do functoons x2 because you have two tables here.
@@ -519,7 +552,7 @@
 
   ![finances-design](./img/readme/finances.png)
 
-  ## ⑨ Dashboard Module 📊
+## ⑧ Dashboard Module 📊
 
   Firstable, redesign it.
   Note: to gradient colors, look for "FillColor1" and "FillColor2" properties.
@@ -608,7 +641,7 @@
 
   ![dashboar-redesign](./img/readme/dashboard.png)
 
-  ## ⑩ Splash and Login development 🔒
+## ⑨ Splash and Login development 🔒
 
   In Splash component:
     1. Check (names) for progressBar and splash screen
@@ -680,7 +713,7 @@
   exit, and now login as the new employee you created before.
   It should work !!
 
-  ## ⑪ Extra Features 🛠️
+## ⑩ Extra Features 🛠️
 
     - Minimize and Close app button
     - Filter function (Cows module)
@@ -705,3 +738,15 @@
             SearchCow();
         }
   ```
+
+# 👨‍🏫😌❤️ Agradecimientos Especiales ❤️😌👨‍🏫
+
+  Me gustaría dedicar este proyecto a mi profesor de programación,
+  por todo el apoyo, dedicación e infinita paciencia que ha tenido con todos nosotros,
+  y sobretodo, por proyectar esa buena energía y ganas de enseñar día tras día.
+  Porque ser profesor no es fácil, pero más difícil aún es llegar a ser un líder,
+  imagen la cual ha transmitido fielmente cada día, basándose en el amor, respeto y autoridad,
+  siendo ejemplo de valores, los cuales han motivado el desarrollo de este proyecto.
+  
+  Muchas gracias por todo profesor. 
+  Reciba un cordial saludo de su alumno.
