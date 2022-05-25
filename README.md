@@ -12,6 +12,7 @@
     - [💼 Install Microsoft SQL Management Studio](#-install-microsoft-sql-management-studio)
     - [🔌 Connect to your new SQL server and create de database](#-connect-to-your-new-sql-server-and-create-de-database)
     - [📋 Create the tables for the database](#-create-the-tables-for-the-database)
+    - [📚 SQL Server database files](#-sql-server-database-files)
 - [👨‍💻 Let's start coding the Backend !!](#‍-lets-start-coding-the-backend-)
     - [① Cow Module 🐄](#①-cow-module-)
     - [② Production Module 🥛](#②-production-module-)
@@ -185,6 +186,13 @@
 
   Now we just need to connect the tables among them with foreign keys,
   but we will get it continuing the project development and throughout code all sections...
+
+## 📚 SQL Server database files
+
+  If you download the project and you pretend to execute it directly,
+  make sure before that you have installed SQL Server and if you've alredy created tables.
+  Also, you can download database files and import them ...
+  https://github.com/Royal6969/dairy-farm-project/tree/main/sql-server-db
   
 # 👨‍💻 Let's start coding the Backend !!
 
@@ -738,6 +746,7 @@
             SearchCow();
         }
   ```
+
 
 # 👨‍🏫😌❤️ Agradecimientos Especiales ❤️😌👨‍🏫
 
